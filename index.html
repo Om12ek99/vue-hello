@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Vue js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--/Vue js -->
+    <title>Vue Hello</title>
 </head>
+
 <body>
+    <!-- div app -->
+    <div id="app">
+        
+        <div>
+            <label for="userName">Nome</label>
+            <input type="text" id="userName" v-model="user">
+        </div>
+        
+        <div>
+            <label for="userlastname">Cognome</label>
+            <input type="text" id="userlastname" v-model="lastName">
+        </div>
+        <div>
+            <button @click="print">Stampa Messaggio</button>
+        </div>
+        <h1>{{ userMessage }}</h1>
+        <img :src="image" alt="">
+    
+    </div>
+    <!-- /div app -->
+
     <script src="./js/script.js"></script>
 </body>
+
 </html>
